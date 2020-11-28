@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab4Tutorial.MyPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Please log in" />
+            <Label Text="Username" TextColor="Black">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="2" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Entry />
+            <Label Text="Password" TextColor="Black" />
+            <Entry IsPassword="true" />
+            <Button x:Name="loginButton" Text="Log in" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

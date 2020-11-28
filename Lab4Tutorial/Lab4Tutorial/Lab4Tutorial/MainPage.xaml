@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab4Tutorial.MainPage"
+             xmlns:local="clr-namespace:Lab4Tutorial">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,40,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <StackLayout>
+        <StackLayout.BackgroundColor>
+            <OnPlatform x:TypeArguments="Color">
+                <On Platform="iOS" Value="Silver" />
+                <On Platform="Android" Value="Green" />
+            </OnPlatform>
+        </StackLayout.BackgroundColor>
+
+        <Label Text="Enter a Phoneword:" FontSize="Large" />
+        <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
+        <Button x:Name="translateButton" TextColor="{x:Static local:SharedResources.ButtonTextColor}" BackgroundColor="{x:Static local:SharedResources.ButtonBkColor}" Text="Translate" Clicked="OnTranslate"/>
+        <Button x:Name="callButton" TextColor="{x:Static local:SharedResources.ButtonTextColor}" BackgroundColor="{x:Static local:SharedResources.ButtonBkColor}" Text="Call" IsEnabled="false" Clicked="OnCall"/>
+    </StackLayout>
+
+</ContentPage>
